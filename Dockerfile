@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Markus Rudel <rudel.markus+dockerimage@gmail.com>
+LABEL maintainer="dazze1812.github@dazze.de"
 
 RUN apk update
 RUN apk add collectd collectd-python collectd-network py-pip libxml2-dev libxslt-dev gcc musl-dev python3-dev bash
