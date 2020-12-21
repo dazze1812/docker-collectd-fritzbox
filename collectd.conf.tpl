@@ -18,7 +18,7 @@ LoadPlugin network
     Port 49000
     User "{{ FRITZ_USER | default("collectd") }}"
     Password "{{ FRITZ_PASSWORD }}"
-    Hostname "FritzBox"
+    Hostname "{{ FRITZ_NAME | default("FritzBox") }}"
     Instance "1"
     Verbose "False"
   </Module>

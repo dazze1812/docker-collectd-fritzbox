@@ -7,7 +7,7 @@ RUN apk add collectd collectd-python collectd-network py-pip libxml2-dev libxslt
 
 RUN pip install fritzcollectd
 
-ADD configs/ /etc/collectd/configs
+ADD collectd.conf.tpl /etc/collectd/collectd.conf.tpl
 
 ADD start /usr/bin/start
 
