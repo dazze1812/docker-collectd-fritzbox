@@ -1,5 +1,7 @@
-# Docker container with collectd configured to collect data from Fritzbox
-This docker container is a preconfigured collectd with installed fritzcollectd. I use it on my Synology DS218+ to gather longterm connection statistics of my Fritzbox.
+# Docker container with collectd configured to collect data from FRITZ!Box
+This docker container is a preconfigured collectd with installed fritzcollectd.
+
+It is used on a Synology NAS to gather longterm connection statistics and DECT sensor data from a FRITZ!Box.
 
 ## Setup
 - Install docker
@@ -53,9 +55,9 @@ docker-compose -f docker-compose.influx.yml up -d
 You've might wonder about the `types.db`. It is taken from the collectd installation and must be present for influxdb, so that influx knows how it should map the values from collectd.
 
 # Credits
-Parts of the config is taken from [collectd-docker](https://github.com/revett/collectd-docker).
+This repository is based on [rudelm/docker-collectd-fritzbox](https://github.com/rudelm/docker-collectd-fritzbox).
 
-# License
-[The MIT License (MIT)](http://opensource.org/licenses/MIT)
+## Reasons for this fork
 
-Copyright (c) 2019 Markus Rudel
+* Support more than one FRITZ!Box
+* Remove InfluxDB setup 
